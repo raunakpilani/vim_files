@@ -1,3 +1,5 @@
+execute pathogen#infect()
+call pathogen#helptags()
 syntax enable
 set tabstop=2
 set softtabstop=2
@@ -11,5 +13,4 @@ set wildmenu
 set lazyredraw
 set showmatch
 set hlsearch
-execute pathogen#infect() 
 
