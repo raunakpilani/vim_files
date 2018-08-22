@@ -1,10 +1,23 @@
 execute pathogen#infect()
 call pathogen#helptags()
 syntax enable
+
+augroup ruby
+  autocmd!
+  autocmd FileType ruby set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
+augroup END
+
+augroup python
+  autocmd!
+  autocmd FileType python set tabstop=4|set shiftwidth=4|set softtabstop=4|set expandtab
+augroup END
+
 set tabstop=2
-set softtabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
+colorscheme default
+let g:indent_guides_enable_on_vim_startup = 10
 set number
 set showcmd
 set cursorline
@@ -13,6 +26,7 @@ set wildmenu
 set lazyredraw
 set showmatch
 set hlsearch
+
 " Rename tabs to show tab number.
 " (Based on http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
 if exists("+showtabline")
